@@ -1,7 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshpixel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .coming-soon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .loading-bar {
+            width: 300px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .loading-progress {
+            width: 0;
+            height: 100%;
+            background: #ffcc00;
+            animation: loading 3s infinite;
+        }
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
 <body>
-<h1>FP</h1>
-<p>.</p>
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="white" stroke-width="5" fill="none" />
+        <polygon points="40,30 70,50 40,70" fill="#ffcc00" />
+    </svg>
+    <div class="coming-soon">Coming Soon</div>
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
 </body>
 </html>
